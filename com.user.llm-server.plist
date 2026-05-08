@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.llm-server</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/username/llm-server/launch.sh</string>
+    </array>
+    
+    <key>WorkingDirectory</key>
+    <string>/Users/username/llm-server</string>
+    
+    <!-- Автозапуск при входе в систему -->
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <!-- 
+      КЛЮЧЕВОЙ ПАРАМЕТР: перезапускать ТОЛЬКО при краше.
+      Если сервер выходит с кодом 0 (штатный --timeout) — НЕ перезапускать.
+      Если код ≠ 0 (segfault, OOM, panic) — перезапустить.
+    -->
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+        <key>Crashed</key>
+        <true/>
+    </dict>
+    
+    <!-- Защита от циклических перезапусков: ждать 30 сек между попытками -->
+    <key>ThrottleInterval</key>
+    <integer>30</integer>
+    
+    <!-- Приоритет процесса: Background, чтобы не мешать офисной работе -->
+    <key>ProcessType</key>
+    <string>Background</string>
+    
+    <!-- Перенаправление логов -->
+    <key>StandardOutPath</key>
+    <string>/Users/username/Library/Logs/llm-server.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/username/Library/Logs/llm-server.log</string>
+    
+    <!-- Минимальное окружение -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <string>/Users/username</string>
+        <key>GGML_METAL_EMBEDDING</key>
+        <string>1</string>
+        <key>GGML_NO_ACCELERATE</key>
+        <string>1</string>
+    </dict>
+</dict>
+</plist>

@@ -1,0 +1,6 @@
+total 33982600
+       0 drwxr-xr-x@  5 username  staff          160 May  4 11:57 .
+       0 drwxr-xr-x@ 25 username  staff          800 May  4 11:56 ..
+       0 -rw-r--r--@  1 username  staff            0 May  4 11:57 files.txt
+10552704 -rw-r--r--@  1 username  staff   5394097376 May  4 10:49 Qwen3.5-9B-Q4_K_S.gguf
+23429896 -rw-r--r--@  1 username  staff  11994777824 May  4 11:54 Qwen3.6-27B-UD-IQ3_XXS.gguf
