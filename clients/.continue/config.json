@@ -1,0 +1,70 @@
+{
+  "models": [
+    {
+      "title": "Qwen3.5-9B (local)",
+      "provider": "openai",
+      "model": "qwen35",
+      "apiBase": "http://127.0.0.1:8000/v1",
+      "apiKey": "token_as_a_lot_of_symbols",
+      "contextLength": 262144,
+      "completionOptions": {
+        "temperature": 0.6,
+        "topP": 0.95,
+        "maxTokens": 8192,
+        "presencePenalty": 0,
+        "frequencyPenalty": 0
+      },
+      "requestOptions": {
+        "timeout": 300000,
+        "extraBodyProperties": {
+          "enable_thinking": true,
+          "thinking": {
+            "budget_tokens": 4096
+          }
+        }
+      }
+    }
+  ],
+
+  "tabAutocompleteModel": {
+    "title": "Qwen3.5-9B (autocomplete)",
+    "provider": "openai",
+    "model": "qwen35",
+    "apiBase": "http://127.0.0.1:8000/v1",
+    "apiKey": "token_as_a_lot_of_symbols",
+    "contextLength": 65536,
+    "completionOptions": {
+      "temperature": 0.2,
+      "maxTokens": 512
+    },
+    "requestOptions": {
+      "timeout": 30000,
+      "extraBodyProperties": {
+        "enable_thinking": false
+      }
+    }
+  },
+
+  "embeddingsProvider": {
+    "provider": "transformers.js"
+  },
+
+  "slashCommands": [
+    { "name": "edit",    "description": "Edit selected code" },
+    { "name": "comment", "description": "Add comments to code" },
+    { "name": "share",   "description": "Export chat as markdown" },
+    { "name": "cmd",     "description": "Generate a shell command" }
+  ],
+
+  "contextProviders": [
+    { "name": "code" },
+    { "name": "docs" },
+    { "name": "diff" },
+    { "name": "terminal" },
+    { "name": "problems" },
+    { "name": "folder" },
+    { "name": "codebase" }
+  ],
+
+  "allowAnonymousTelemetry": false
+}
