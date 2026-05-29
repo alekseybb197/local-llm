@@ -1,0 +1,45 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": "8080",
+    "tls": false,
+    "tls_cert": "",
+    "tls_key": ""
+  },
+  "database": {
+    "path": "./data/oauth2.db"
+  },
+  "oauth": {
+    "client_id": "",
+    "client_secret": "",
+    "auth_server_url": "http://localhost:8000",
+    "redirect_uri": "http://localhost:8080/oauth/callback",
+    "scopes": ["openid", "profile", "email"],
+    "authorization_timeout": 60,
+    "code_challenge_method": "S256"
+  },
+  "llm": {
+    "llm_url": "http://localhost:11434",
+    "model": "llama3",
+    "timeout": 30,
+    "max_tokens": 4096,
+    "temperature": 0.7
+  },
+  "cors": {
+    "allowed_origins": ["http://localhost:3000", "http://localhost:8080"],
+    "allowed_methods": ["GET", "POST", "OPTIONS"],
+    "allowed_headers": ["Authorization", "Content-Type", "Accept"],
+    "allow_credentials": true,
+    "max_age": 43200
+  },
+  "rate_limit": {
+    "rpm": 60,
+    "burst": 10,
+    "window": 60
+  },
+  "log": {
+    "level": "info",
+    "format": "text",
+    "enable_color": false
+  }
+}

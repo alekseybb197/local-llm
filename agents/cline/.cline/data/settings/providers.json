@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "lastUsedProvider": "openai-compatible",
+  "providers": {
+    "cline": {
+      "settings": {
+        "provider": "cline",
+        "model": "qwen/qwen3.7-max"
+      },
+      "updatedAt": "2026-05-23T22:07:33.229Z",
+      "tokenSource": "manual"
+    },
+    "openai-compatible": {
+      "settings": {
+        "provider": "openai-compatible",
+        "apiKey": "token_as_a_lot_of_simbols",
+        "model": "qwen35",
+        "baseUrl": "http://127.0.0.1:8000/v1",
+        "reasoning": {
+          "enabled": false
+        }
+      },
+      "updatedAt": "2026-05-23T22:08:35.476Z",
+      "tokenSource": "manual"
+    }
+  }
+}

@@ -1,6 +1,7 @@
-total 33982600
-       0 drwxr-xr-x@  5 username  staff          160 May  4 11:57 .
-       0 drwxr-xr-x@ 25 username  staff          800 May  4 11:56 ..
-       0 -rw-r--r--@  1 username  staff            0 May  4 11:57 files.txt
-10552704 -rw-r--r--@  1 username  staff   5394097376 May  4 10:49 Qwen3.5-9B-Q4_K_S.gguf
-23429896 -rw-r--r--@  1 username  staff  11994777824 May  4 11:54 Qwen3.6-27B-UD-IQ3_XXS.gguf
+total 33411000
+       0 drwxr-xr-x@  6 username  staff         192 May 20 01:14 .
+       0 drwxr-xr-x@ 35 username  staff        1120 May 24 11:44 ..
+       0 -rw-r--r--@  1 username  staff           0 May 29 20:36 files.txt
+10893152 -rw-r--r--@  1 username  staff  5577290080 May 20 00:39 Qwen3.5-9B-MTP-Q4_K_S.gguf
+11982496 -rw-r--r--@  1 username  staff  6135034208 May 20 01:13 Qwen3.5-9B-MTP-UD-Q4_K_XL.gguf
+10535352 -rw-r--r--@  1 username  staff  5394097376 May  4 10:49 Qwen3.5-9B-Q4_K_S.gguf

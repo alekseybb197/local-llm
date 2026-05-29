@@ -1,0 +1,34 @@
+auth_mode = "api_key"
+provider = "openai"
+
+[http_headers]
+
+[projects."/Users/username/tmp/oauth2/deepseek"]
+trust_level = "trusted"
+
+[providers.atlascloud.http_headers]
+
+[providers.deepseek.http_headers]
+
+[providers.fireworks.http_headers]
+
+[providers.novita.http_headers]
+
+[providers.nvidia_nim.http_headers]
+
+[providers.ollama.http_headers]
+
+[providers.openai]
+api_key = "token_as_a_lot_of_simbols"
+base_url = "http://127.0.0.1:8000/v1"
+model = "qwen35"
+
+[providers.openai.http_headers]
+
+[providers.openrouter.http_headers]
+
+[providers.sglang.http_headers]
+
+[providers.vllm.http_headers]
+
+[providers.wanjie_ark.http_headers]
