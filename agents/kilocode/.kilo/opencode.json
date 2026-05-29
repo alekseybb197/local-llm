@@ -1,0 +1,25 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "model": "llama-local/qwen35",
+  "provider": {
+    "llama-local": {
+      "name": "llama-server local",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://127.0.0.1:8000/v1",
+        "apiKey": "token_as_a_lot_of_simbols"
+      },
+      "models": {
+        "qwen35": {
+          "id": "qwen35",
+          "name": "Qwen3.5-9B (local)",
+          "tool_call": true,
+          "limit": {
+            "context": 262144,
+            "output": 8192
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+*.md
+*.git
+*.gitignore
+*.tf
+.env
+.env.*
+!Dockerfile
+!Dockerfile.cgo
+!go.mod
+!go.sum

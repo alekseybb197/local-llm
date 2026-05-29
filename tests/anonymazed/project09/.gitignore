@@ -1,0 +1,26 @@
+# Binary
+oauth2-proxy
+
+# Dependency directories
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test binary
+*_test
+
+# Config files (optional - uncomment if you want to commit config)
+# config.json

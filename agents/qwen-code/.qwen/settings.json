@@ -1,0 +1,43 @@
+{
+  "modelProviders": {
+    "openai": [
+      {
+        "id": "${LOCAL_LLM_ALIAS}",
+        "name": "${LOCAL_LLM_MODEL}",
+        "baseUrl": "http://${LOCAL_LLM_HOST}:${LOCAL_LLM_PORT}",
+        "description": "Local Qwen3.5-9B",
+        "envKey": "LOCAL_LLM_APIKEY",
+        "generationConfig": {
+          "timeout": 300000,
+          "maxRetries": 1,
+          "contextWindowSize": "${LOCAL_LLM_CONTEXT}",
+          "samplingParams": {
+            "temperature": 0.6,
+            "top_p": 0.9,
+            "max_tokens": 8192,
+            "presence_penalty": 0,
+            "frequency_penalty": 0
+          },
+          "extra_body": {
+            "enable_thinking": true
+          }
+        }
+      }
+    ]
+  },
+  "env": {
+    "LOCAL_LLM_APIKEY": "token_as_a_lot_of_simbols"
+  },
+  "security": {
+    "auth": {
+      "selectedType": "openai"
+    }
+  },
+  "model": {
+    "name": "${LOCAL_LLM_ALIAS}"
+  },
+  "tools": {
+    "approvalMode": "default"
+  },
+  "$version": 3
+}

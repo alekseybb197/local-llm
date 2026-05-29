@@ -14,13 +14,18 @@ app/llama-server -m models/$LOCAL_LLM_MODEL \
   --ctx-size $LOCAL_LLM_CONTEXT \
   --n-gpu-layers $LOCAL_LLM_NGLAYERS \
   --flash-attn on \
+  --kv-unified \
+  --no-warmup \
   --threads $LOCAL_LLM_THREADS \
   --jinja \
-  --cache-type-k $LOCAL_LLM_CACHE \
-  --cache-type-v $LOCAL_LLM_CACHE \
+  --cache-type-k $LOCAL_LLM_CACHEK \
+  --cache-type-v $LOCAL_LLM_CACHEV \
+  --spec-type $LOCAL_LLM_SPEC \
+  --spec-draft-n-max $LOCAL_LLM_NMAX \
   --timeout $LOCAL_LLM_TIMEOUT \
   --parallel $LOCAL_LLM_SLOTS \
   --alias $LOCAL_LLM_ALIAS \
   --cache-ram $LOCAL_LLM_CACHERAM \
+  --verbosity $LOCAL_LLM_VERBOSITY \
   --reasoning $LOCAL_LLM_REASONING
 

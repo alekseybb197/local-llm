@@ -1,0 +1,15 @@
+[model_providers.litellm]
+name = "LiteLLM → llama-server"
+base_url = "http://127.0.0.1:8000/v1"
+wire_api = "responses"
+stream_idle_timeout_ms = 300000
+
+[profiles.qwen35]
+model_provider = "litellm"
+model = "qwen35"
+
+[projects."/Users/username/tmp/oauth2/codex"]
+trust_level = "trusted"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 3
