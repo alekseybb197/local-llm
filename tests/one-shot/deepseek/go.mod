@@ -1,4 +1,4 @@
-module github.com/example/oauth2-proxy
+module github.com/deepseek/oauth2-proxy
 
 go 1.23
 
