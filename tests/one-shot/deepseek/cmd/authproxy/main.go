@@ -15,7 +15,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/example/oauth2-proxy/internal/pkg"
+	"github.com/deepseek/oauth2-proxy/internal/pkg"
 )
 
 func main() {
